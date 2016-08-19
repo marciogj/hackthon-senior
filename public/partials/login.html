@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Identificação</h2>
+        <form method="post" ng-submit="login()" name="loginForm">
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="text" name="text" ng-model="user.name" placeholder="Nome" required>
+            <span class="ion-person form-control-feedback"></span>
+          </div>
+
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="text" name="email" ng-model="user.email" placeholder="Email" required autofocus>
+            <span class="ion-at form-control-feedback"></span>
+          </div>
+
+          <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg  btn-block btn-success">Acessar</button>
+          <br/>
+
+          <div class="signup-or-separator">
+            <h6 class="text">Redes Sociais</h6>
+            <hr>
+          </div>
+        </form>
+        <button class="btn btn-block btn-facebook" ng-click="authenticate('facebook')">
+          <i class="ion-social-facebook"></i> Facebook
+        </button>
+        <button class="btn btn-block btn-google-plus" ng-click="authenticate('google')">
+          <span class="ion-social-googleplus"></span>Google
+        </button>
+        <button class="btn btn-block btn-linkedin" ng-click="authenticate('linkedin')">
+          <i class="ion-social-linkedin"></i>LinkedIn
+        </button>
+        <button class="btn btn-block btn-twitter" ng-click="authenticate('twitter')">
+          <i class="ion-social-twitter"></i>Twitter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
